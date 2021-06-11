@@ -3,12 +3,7 @@ variable "region" {
   default = "us-east-1"
 }
 
-variable "bucketname" {
+variable "backend_name" {
   type    = string
-  default = "ex-resume"
-}
-
-variable "domain_name" {
-  type    = string
-  default = "xaviercordovajr.com"
+  default = "cloudresume-state"
 }
