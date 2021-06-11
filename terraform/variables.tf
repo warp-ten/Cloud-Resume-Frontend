@@ -3,7 +3,7 @@ variable "region" {
   default = "us-east-1"
 }
 
-variable "backend_name" {
+variable "bucketname" {
   type    = string
-  default = "cloudresume-state"
+  default = "ex-resume"
 }
