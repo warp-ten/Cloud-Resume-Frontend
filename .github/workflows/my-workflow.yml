@@ -27,7 +27,7 @@ jobs:
           AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   
-  Terraform-apply:
+  Terraform-replace-index.html:
     needs: [Terraform-validate-plan]
     runs-on: ubuntu-latest
     steps:
@@ -40,7 +40,7 @@ jobs:
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: apply
-        uses: ./.github/actions/apply
+        uses: ./.github/actions/replace-index.html
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
