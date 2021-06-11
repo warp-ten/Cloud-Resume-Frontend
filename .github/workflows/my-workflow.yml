@@ -27,7 +27,7 @@ jobs:
           AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   
-  Terraform-replace-index.html:
+  Terraform-replace-index:
     needs: [Terraform-validate-plan]
     runs-on: ubuntu-latest
     steps:
