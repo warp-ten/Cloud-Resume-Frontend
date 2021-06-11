@@ -1,0 +1,9 @@
+name: "validate"
+
+description: "Validate Terraform Files"
+
+runs: 
+  using: "docker"
+  image: "../../../terraform/Dockerfile"
+  args: 
+    - "validate"

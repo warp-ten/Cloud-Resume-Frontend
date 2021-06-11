@@ -1,0 +1,9 @@
+name: "plan"
+
+description: "Create Terraform Plan"
+
+runs: 
+  using: "docker"
+  image: "../../../terraform/Dockerfile"
+  args: 
+    - "plan" 
