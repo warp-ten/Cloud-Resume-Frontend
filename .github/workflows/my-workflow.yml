@@ -3,7 +3,7 @@ name: My Terraform Actions
 on:
   push:
     paths:
-      - "index.html"
+      - "/html/index.html"
   workflow_dispatch:
 
 jobs:
