@@ -7,5 +7,5 @@ runs:
   image: "../../../terraform/Dockerfile"
   args: 
     - "apply"
-    - "-replace"
-    - "=aws_s3_bucket_object.index"
+    - "-replace="
+    - "aws_s3_bucket_object.index"
