@@ -8,4 +8,4 @@ runs:
   args: 
     - "apply"
     - "-replace"
-    - "aws_s3_bucket_object.index"
+    - "=aws_s3_bucket_object.index"
