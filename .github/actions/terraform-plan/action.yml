@@ -4,4 +4,4 @@ description: "Create Terraform Plan"
 
 runs: 
   using: "docker"
-  image: "../../../terraform/Dockerfile" 
+  image: "../terraform-init/Dockerfile" 

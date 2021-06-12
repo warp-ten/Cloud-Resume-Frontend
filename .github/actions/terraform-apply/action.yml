@@ -1,0 +1,9 @@
+name: "terraform apply"
+
+description: "Apply plan"
+
+runs: 
+  using: "docker"
+  image: "../terraform-init/Dockerfile"
+  args: 
+    - "apply"

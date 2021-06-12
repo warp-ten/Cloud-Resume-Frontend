@@ -1,0 +1,31 @@
+name: terraform
+on: 
+  push:
+   branches: 
+    - main 
+jobs:
+  terraform-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: init
+        uses: ./.github/actions/terraform-init
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: validate
+        uses: ./.github/actions/terraform-validate
+
+      - name: plan
+        uses: ./.github/actions/terraform-plan
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  
+      - name: apply
+        uses: ./.github/actions/terraform-apply
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

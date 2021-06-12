@@ -4,6 +4,6 @@ description: "Initialize Terraform"
 
 runs: 
   using: "docker"
-  image: "../../../terraform/Dockerfile"
+  image: "Dockerfile"
   args:
     - "init"
