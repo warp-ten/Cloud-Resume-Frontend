@@ -1,20 +1,21 @@
 name: push to s3
 
-on: 
+on:
   push:
-    branches:
-    - main
+    branches: 
+      - master
+  workflow_dispatch:
 
-# sync files to s3
 jobs:
-  deploy:
+  s3-sync:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/s3-sync-action@master
-    env:
-      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: 'us-east-1'
-      SOURCE_DIR: './html'
+      - uses: actions/checkout@v2
+      - name: s3 sync
+        uses: docker://amazon/aws-cli:latest
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
+        with:
+          args: s3 sync /github/workspace/html s3://${{secrets.AWS_S3_BUCKET}}
