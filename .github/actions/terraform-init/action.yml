@@ -1,9 +1,0 @@
-name: "init"
-
-description: "Initialize Terraform"
-
-runs: 
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - "init"
