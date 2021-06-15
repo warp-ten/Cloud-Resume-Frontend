@@ -18,4 +18,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
         with:
-          args: s3 sync /github/workspace/html s3://${{secrets.AWS_S3_BUCKET}}
+          args: s3 sync /github/workspace/html s3://ex-resume
