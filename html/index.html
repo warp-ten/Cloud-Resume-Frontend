@@ -1,11 +1,177 @@
 <!DOCTYPE html>
-<html>
-   <body style="background-color:#FFFFFF">
-      <h1>You made it here.</h1>
-      <h2>Congratulations!!!</h2>
-      <img src="yellowranger.gif" alt="You made it!!!">
-      <div>
-         <p>proudly brought to you by github actions</p>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <style>
+    body {
+      background-color: rgb(235, 235, 235);
+    }     
+    .leftcol {
+      height: 95%;
+      max-width: 25%;
+      position: fixed;
+      z-index: 1;
+      top: 1.7%;
+      left: 10%;
+      background-color: white;
+      color: black;
+      padding: 8px;
+      overflow-x: hidden;
+    }
+    #firstname {
+        color: black;
+        margin-bottom: 0px;
+    }
+    #lastname {
+        color: black;
+        margin-top: -3mm;
+    }
+    .rightcol {
+        display: grid;
+        max-width: 50%;
+        margin-left: 35%;
+        padding-left: 20px;
+        margin-top: 1.5%;
+        color: black;
+        grid-gap: 10px;
+    }   
+    .rightcol > div {
+        padding: 10px;
+        background-color: white;
+    }
+    #certstitle {
+        border-bottom: 1px solid black;
+        margin-bottom: -2mm;
+    }        
+    </style>
+  </head>  
+  <body>
+
+    <div class="leftcol">
+        <div class="fullname">
+            <h1 id="firstname">XAVIER</h1> 
+            <h1 id="lastname">CORDOVA JR</h1>       
+        </div>
+        <div class="aboutme">
+            <h3 id="aboutmetitle">/ ALL ABOUT ME</h3> 
+            <p id="aboutmetext">
+                I love solving problems and taking on new challenges.<br><br>
+                As a former professional brewer, I have considerable experience automating tedious tasks and managing the operations and business of brewing.<br><br>
+                During the COVID 19 pandemic, I've spent the last year learning to apply the skills I've mastered in brewing and extending them into software and technology. I am a Certified Kubernetes Administrator, as well as an AWS Certified Cloud Practitioner. I've completed courses on Linux Systems Administration, Docker, Git, Python, AWS, and Terraform, as well as completing Generation USA's Junior Cloud Practitioner Program.<br><br>
+                I am passionate about automating tedious or repetitive tasks into streamlined processes. I'm looking for the right opportunity to continue to hone my technical skills, while bringing my brewing industry experience to bear on my new role.
+            </p>
+        </div>
+    </div>  
+
+    <div class="rightcol"> 
+        <div class="contact">
+            <h3 id="contacttitle">/ CONTACT  DETAILS </h3>
+            <p id ="contacttext">
+                Xaviercordovajr@gmail.com<br> 
+                Mobile No. 915-217-7345<br>
+                New Orleans, LA<br> 
+                <a href="https://www.linkedin.com/in/xavier-cordova-jr">Linkedin</a> <br>
+                <a href="https://github.com/warp-ten">Github</a><br>
+            </p>
+          </div>
+      <div class="certs">
+        <h3 id="certstitle">/ CERTIFICATIONS</h3>
+        <p id="certslist">
+            Certifired Kubernetes Administrator<br>
+            AWS Certified Cloud Practitioner
+        </p>
       </div>
-   </body>
+      <div class="item5">
+        <h3 id="skillstitle">/ Skills</h3>
+        <p id ="Skills">
+            <ul>
+            <li>Linux</li>
+            <li>Bash</li>
+            <li>Microsoft Office Suite</li>
+            <li>Docker Git Creative</li>
+            <li>AWS</li>
+            <li>Kubernetes</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Python</li>
+            <li>SSH</li>
+            <li>Hardworking</li>
+            <li>Curious</li>
+            <li>Adaptable</li>
+            </ul>
+        </p>
+      </div>
+
+      <div class="item6">
+        <h3>/ Education History</h3>
+        <p id="EducationHistory">
+        <b>Generation USA</b><br>
+        Junior Cloud Practitioner<br>
+        Fast paced program teaching learners to become proficient cloud practitioners. AWS, Linux               Administration, Python, Terraform, Ansible
+        <br><br>
+
+        <b>Linux Foundation.org</b><br>
+        Kubernetes Fundamentals (LFS258)<br>
+        Install and configure a production-grade Kubernetes cluster on Google Cloud Platform
+        <br><br>
+
+            <b>Linux Fundamentals (LFS101)</b><br>
+        Working knowledge of Linux, from both the desktop and CLI, allowing to continueas either a user,         system administrator or developer using the acquired skill set.
+        <br><br>
+
+        <b>KodeKloud.com</b><br>
+            Docker
+            Ansible
+            Certified Kubernetes Administrator (CKA)
+            Git
+            Terraform
+        <br><br>
+
+        <b>UDemy.com</b><br>
+            Complete Git Guide: Understand and master Git and GitHub
+        <br><br>
+        </p>
+      </div>
+
+
+      <div class="item7">
+        <h3>/ WORK EXPERIENCE</h3>
+        <p id="WorkExperience">
+        Head Brewer<br>
+        Crescent City Brewhouse | 2017 to 2020<br>
+        Managed all aspects of brewing process from raw material procurement, brewing and quality control to     equipment maintenance and maintaining vendor relationships.<br>
+        Created and presented continual education topics for customer facing staff.Automated spreadsheets to     aid with projecting purchasing decisions in a highly volatile tourism market.<br>
+        Created and updated brewhouse documentation, from brewhouse schematics to maintenance logs and           Standard Operating Procedures.<br>
+        Represented the company, and accounted for volunteers and brewhouse equipment at community               outreach/fundraising events<br>
+        <br><br>
+
+        Head Brewer<br>
+        Barkeater Craft Brewery | 2016 to 2017<br>
+        Owned every aspect of producing beer from raw material procurement, brewing and quality control to       equipment maintenance and vendor relationships<br>
+        Created automated spreadsheets with use of visual basic to create water profiles for beer, project       future needs, and maintain inventory with in a tight budget.<br>
+        </p>
+      </div>
+
+      <div class="item8">
+        <h3>/ PROJECTS & OTHER INTERESTS</h3>
+        <p id="Projects">
+            <ul>
+            <li>Go</li>
+            <li>Javascript</li>
+            <li>Penetration Testing (OSCP Certification)</li>
+            <li>Kubernetes Security Specialist</li>
+            <li>Hashicorp Packer</li>
+            </ul>
+        </p>
+      </div>
+      
+    </div>
+  </body>
 </html>
+
