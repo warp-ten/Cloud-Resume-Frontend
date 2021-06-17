@@ -48,12 +48,28 @@
     #contacttitle {
       margin-bottom: -2mm;
     }
-    #certstitle {
-        border-bottom: 1px solid black;
-        margin-bottom: -2mm;
+    [id*="title"] {
+        margin-bottom: -3mm;
+        text-decoration: underline;
     }        
-    #certstext {
-       margin-left: 3mm;
+    [id*="text"]{
+       margin-left: 3mm;   
+    }
+    [id*="singleindent"] {
+      margin-left: 3mm;
+      margin-top: -3mm;
+    }
+    [id*="doubleindent"] {
+      margin-left: 6mm;
+      margin-top: -3mm;
+    }
+    [id*="tripleindent"] {
+      margin-left: 9mm; 
+      margin-top: -3mm;
+    }
+    [id*="subheading"] {
+       font-size: 90%;
+       font-weight: bold;
     }
     </style>
   </head>  
@@ -93,7 +109,7 @@
             AWS Certified Cloud Practitioner
         </p>
       </div>
-      <div class="item5">
+      <div class="skills">
         <h3 id="skillstitle">/ Skills</h3>
         <p id ="Skillstext">
             <ul>
@@ -114,57 +130,46 @@
         </p>
       </div>
 
-      <div class="item6">
+      <div class="education">
         <h3 id="educationtitle">/ Education History</h3>
         <p id="educationtext">
-        <b>Generation USA</b><br>
-        Junior Cloud Practitioner<br>
-        Fast paced program teaching learners to become proficient cloud practitioners. AWS, Linux               Administration, Python, Terraform, Ansible
-        <br><br>
+         <p id="text"><b>Generation USA - Cloud Practitioner</b></p>
+         <p id="doubleindent">Fast paced program teaching learners to become proficient cloud practitioners. AWS, Linux Administration, Python, Terraform, Ansible</p>
 
-        <b>Linux Foundation.org</b><br>
-        Kubernetes Fundamentals (LFS258)<br>
-        Install and configure a production-grade Kubernetes cluster on Google Cloud Platform
-        <br><br>
+         <p id="singleindent"><b>Linux Foundation.org</b></p>
+            <p id="doubleindent subheading">Kubernetes Fundamentals (LFS258)</p>
+               <p id="tripleindent">Install and configure a production-grade Kubernetes cluster on Google Cloud Platform<p/>
+            <p id="doubleindent subheading">Linux Fundamentals (LFS101)</p>
+               <p id="tripleindent">Working knowledge of Linux, from both the desktop and CLI, allowing to continueas either a user, system administrator or developer using the acquired skill set.</p>
+         <p id="singleindent"><b>KodeKloud.com</b></p>
+            <p id="doubleindent">Docker<br>Ansible<br>Certified Kubernetes Administrator (CKA)<br>Git<br>Terraform</p>
 
-            <b>Linux Fundamentals (LFS101)</b><br>
-        Working knowledge of Linux, from both the desktop and CLI, allowing to continueas either a user,         system administrator or developer using the acquired skill set.
-        <br><br>
-
-        <b>KodeKloud.com</b><br>
-            Docker
-            Ansible
-            Certified Kubernetes Administrator (CKA)
-            Git
-            Terraform
-        <br><br>
-
-        <b>UDemy.com</b><br>
-            Complete Git Guide: Understand and master Git and GitHub
-        <br><br>
+         <p id="singleindent"><b>UDemy.com</b></p>
+         <p id="doubleindent">Complete Git Guide: Understand and master Git and GitHub</p>
         </p>
       </div>
 
 
-      <div class="item7">
+      <div class="experience">
         <h3 id="experiencetitle">/ WORK EXPERIENCE</h3>
-        <p id="experiencetext">
-        Head Brewer<br>
-        Crescent City Brewhouse | 2017 to 2020<br>
-        Managed all aspects of brewing process from raw material procurement, brewing and quality control to     equipment maintenance and maintaining vendor relationships.<br>
-        Created and presented continual education topics for customer facing staff.Automated spreadsheets to     aid with projecting purchasing decisions in a highly volatile tourism market.<br>
-        Created and updated brewhouse documentation, from brewhouse schematics to maintenance logs and           Standard Operating Procedures.<br>
-        Represented the company, and accounted for volunteers and brewhouse equipment at community               outreach/fundraising events<br>
-        <br><br>
-
-        Head Brewer<br>
-        Barkeater Craft Brewery | 2016 to 2017<br>
-        Owned every aspect of producing beer from raw material procurement, brewing and quality control to       equipment maintenance and vendor relationships<br>
-        Created automated spreadsheets with use of visual basic to create water profiles for beer, project       future needs, and maintain inventory with in a tight budget.<br>
+        
+        <p id="text subheading">Crescent City Brewhouse | 2017 to 2020</p>
+        <p id="singleindent subheading">Head Brewer</p>
+        <p id="doubleindent"> 
+           Managed all aspects of brewing process from raw material procurement, brewing and quality control to equipment maintenance and maintaining vendor relationships.<br>
+           Created and presented continual education topics for customer facing staff.Automated spreadsheets to aid with projecting purchasing decisions in a highly volatile tourism market.<br>
+           Created and updated brewhouse documentation, from brewhouse schematics to maintenance logs and Standard Operating Procedures.<br>
+           Represented the company, and accounted for volunteers and brewhouse equipment at community outreach/fundraising events
         </p>
+        <p id="text subheading">Barkeater Craft Brewery | 2016 to 2017</p>
+        <p id="singleindent subheading">Head Brewer</p>
+        <p id="doubleindent">
+          Owned every aspect of producing beer from raw material procurement, brewing and quality control to       equipment maintenance and vendor relationships<br>
+          Created automated spreadsheets with use of visual basic to create water profiles for beer, project       future needs, and maintain inventory with in a tight budget.<br>
+        </p>  
       </div>
 
-      <div class="item8">
+      <div class="projects">
         <h3 id="projectstitle">/ PROJECTS & OTHER INTERESTS</h3>
         <p id="projectstext">
             <ul>
