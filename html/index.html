@@ -18,7 +18,26 @@
       grid-template-columns: 2fr 1fr .5px 2fr 2fr; 
       grid-template-rows: auto;
     }
-    
+    /* .galleryitem{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0%;
+      top: 0px;
+    }
+    .galleryitem .image{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin: 0%;
+    }
+    .galleryitem .image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 10px;
+      border-radius: 10px;
+    } */
     .leftcol {
       display: grid;
       grid-column: 2;
@@ -31,8 +50,9 @@
       padding: 10px;
       border-radius: 10px;
       position: sticky;
-      top: 10px;
       bottom: 10px;
+      top: 10px;
+      box-shadow: 4px 5px 5px grey;
     }
     .rightcol {
       grid-column: 4;
@@ -40,12 +60,14 @@
       grid-gap: 10px;
       padding: 10px;
       background-color: rgb(235, 235, 235);
+
     }
     .rightcol > div {
       top: 0mm;      
       background-color: white;
       padding: 10px;
       border-radius: 10px;
+      box-shadow: 4px 5px 5px grey;
     }  
     #lastname {
         color: black;
@@ -54,6 +76,33 @@
     }
     #contacttitle {
     margin-bottom: -2mm;
+    }
+    .container{
+       display:grid;
+       grid-gap: 10px;
+       grid-template-columns:50px 50px 50px 50px;
+       grid-template-rows:50px;
+       background-color: white;
+       margin-top: 6mm;
+       margin-bottom: 2mm;
+    }
+    .containeritem{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .containeritem .image{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .containeritem .image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }   
+    .containeritem:hover .image img{
+       transform:scale(.85);
     }
     [id*="title"] {
       margin-bottom: -3mm;
@@ -99,36 +148,75 @@
   </head>  
   <body>
     <div class="everything">
-      
       <div class="leftcol">
+         <!-- <div class="gallerycontainer"> <div class="galleryitem"> <div class="image"> <img src="./photo.jpg"alt="photo"></div></div></div> -->
         <div class="leftcol-contents">
-         <div class="fullname">
-               <h1 id="firstname">XAVIER</h1> 
-               <h1 id="lastname">CORDOVA JR</h1>       
-         </div>
+           <div class="fullname">
+             <h1 id="firstname">XAVIER</h1> 
+             <h1 id="lastname">CORDOVA JR</h1>       
+           </div>
          <div class="aboutme">
                <h3 id="aboutmetitle">/ ALL ABOUT ME</h3> 
                <p id="aboutmetext">
-                  I love solving problems and taking on new challenges.<br><br>
+                  Technologist who is highly self-motivated and loves a challenge.<br>
+                  Looking forward to working along<br>
+                  side peers in the quest to automate<br>
+                  routine tasks and increase the<br>
+                  overall efficiency of our systems.<br>
+                  Seeking roles in DevOps, Systems<br>
+                  Administration, and Cloud<br>
+                  Infrastructure | Architecture.<br>
+
+                  <!-- I love solving problems and taking on new challenges.<br><br>
                   As a former professional brewer, I have considerable experience automating tedious tasks and managing the operations and business of brewing.<br><br>
                   During the COVID 19 pandemic, I've spent the last year learning to apply the skills I've mastered in brewing and extending them into software and technology. I am a Certified Kubernetes Administrator, as well as an AWS Certified Cloud Practitioner. I've completed courses on Linux Systems Administration, Docker, Git, Python, AWS, and Terraform, as well as completing Generation USA's Junior Cloud Practitioner Program.<br><br>
-                  I am passionate about automating tedious or repetitive tasks into streamlined processes. I'm looking for the right opportunity to continue to hone my technical skills, while bringing my brewing industry experience to bear on my new role.
+                  I am passionate about automating tedious or repetitive tasks into streamlined processes. I'm looking for the right opportunity to continue to hone my technical skills, while bringing my brewing industry experience to bear on my new role. -->
                </p>
+               <!-- <p>
+                  <A HREF="resume.html">Resume</A>
+               </p> -->
          </div>
-        </div>   
-      </div>  
-
-      <div class="rightcol"> 
-        <div class="contact">
+         <div class="contact">
             <h3 id="contacttitle">/ CONTACT  DETAILS </h3>
             <p id ="contacttext">
                 Xaviercordovajr@gmail.com<br> 
                 Mobile No. 915-217-7345<br>
                 New Orleans, LA<br> 
-                <a href="https://www.linkedin.com/in/xavier-cordova-jr">Linkedin</a> <br>
-                <a href="https://github.com/warp-ten">Github</a><br>
             </p>
-          </div>
+         </div>
+         <div class="container">
+            <div class="gallerycontainer">
+               <div class="containeritem">  
+                  <div class="image">  
+                     <img class="blank"src="./white.png"alt="blank-icon"> 
+                  </div> 
+                  <div class="text">Github</div> 
+               </div>
+            </div>
+            <div class="gallerycontainer">
+               <div class="containeritem">  
+                  <div class="image"> 
+                     <a href="https://github.com/warp-ten">
+                        <img class="github"src="./github.png"alt="github-icon"> 
+                     </a>
+                  </div> 
+                  <div class="text">Github</div> 
+               </div>
+            </div>
+            <div class="gallerycontainer">
+               <div class="containeritem">  
+                  <div class="image">  
+                     <a href="https://www.linkedin.com/in/xavier-cordova-jr">
+                        <img class="linkedin" src="./linkedin.png"alt="linkedin-icon"> 
+                     </a>
+                  </div> 
+                  <div class="text">Linkedin</div> 
+               </div>
+            </div>
+         </div>
+        </div>   
+      </div>  
+      <div class="rightcol">     
       <div class="certs">
         <h3 id="certstitle">/ CERTIFICATIONS</h3>
         <p id="certstext">
@@ -197,14 +285,12 @@
       </div>
       <div class="projects">
         <h3 id="projectstitle">/ PROJECTS & OTHER INTERESTS</h3>
-        <p id="projectstext">
-            <ul>
-            <li>Go</li>
-            <li>Javascript</li>
-            <li>Penetration Testing (OSCP Certification)</li>
-            <li>Kubernetes Security Specialist</li>
-            <li>Hashicorp Packer</li>
-            </ul>
+        <p id="projectstext text">
+            Go<br>
+            Javascript<br>
+            Penetration Testing (OSCP Certification)<br>
+            Kubernetes Security Specialist<br>
+            Hashicorp Packer<br>  
         </p>
       </div>
     </div>
