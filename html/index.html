@@ -4,94 +4,121 @@
     <title>Hello!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
     <style>
     body {
       background-color: rgb(235, 235, 235);
-    }     
+    }  
+
+    .everything {
+      display: grid;
+      background-color: rgb(235, 235, 235);
+      grid-template-columns: 2fr 1fr .5px 2fr 2fr; 
+      grid-template-rows: auto;
+    }
+    
     .leftcol {
-      height: 95%;
-      max-width: 25%;
-      position: fixed;
-      z-index: 1;
-      top: 1.7%;
-      left: 10%;
+      display: grid;
+      grid-column: 2;
+      background-color: rgb(235, 235, 235);
+      grid-gap: 10px;
+    }
+    .leftcol > div {
+      margin: auto;
       background-color: white;
-      color: black;
-      padding: 8px;
-      overflow-x: hidden;
-    }
-    #firstname {
-        color: black;
-        margin-bottom: 0px;
-    }
-    #lastname {
-        color: black;
-        margin-top: -3mm;
+      padding: 10px;
+      border-radius: 10px;
+      position: sticky;
+      top: 10px;
+      bottom: 10px;
     }
     .rightcol {
-        display: grid;
-        max-width: 40%;
-        margin-left: 35%;
-        padding-left: 20px;
-        margin-top: 1.5%;
-        color: black;
-        grid-gap: 10px;
-    }   
+      grid-column: 4;
+      display: grid;
+      grid-gap: 10px;
+      padding: 10px;
+      background-color: rgb(235, 235, 235);
+    }
     .rightcol > div {
-        padding: 10px;
-        background-color: white;
+      top: 0mm;      
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }  
+    #lastname {
+        color: black;
+        margin-top: -8mm;
+        margin-bottom: -3mm;
     }
     #contacttitle {
-      margin-bottom: -2mm;
+    margin-bottom: -2mm;
     }
     [id*="title"] {
-        margin-bottom: -3mm;
-        text-decoration: underline;
+      margin-bottom: -3mm;
+      text-decoration: underline;
     }        
     [id*="text"]{
-       margin-left: 3mm;   
+     margin-left: 3mm;   
     }
     [id*="singleindent"] {
-      margin-left: 3mm;
-      margin-top: -3mm;
+    margin-left: 3mm;
+    margin-top: -3mm;
     }
     [id*="doubleindent"] {
-      margin-left: 6mm;
-      margin-top: -3mm;
+    margin-left: 6mm;
+    margin-top: -3mm;
     }
     [id*="tripleindent"] {
-      margin-left: 9mm; 
-      margin-top: -3mm;
+    margin-left: 9mm; 
+    margin-top: -3mm;
     }
     [id*="subheading"] {
-       font-size: 90%;
-       font-weight: bold;
+     font-size: 90%;
+     font-weight: bold;
+    }
+    .skillslist{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: auto;
+    }
+    .skillslist > div{  
+      text-align: left;
+      margin-left: 3mm;
+
+    }
+    .skilltitle{
+       grid-row: 1;
+       grid-column: 1 / 4;
+       text-decoration: underline;
+       margin-bottom: -5mm;
+       margin-top: -3mm;
     }
     </style>
   </head>  
   <body>
+    <div class="everything">
+      
+      <div class="leftcol">
+        <div class="leftcol-contents">
+         <div class="fullname">
+               <h1 id="firstname">XAVIER</h1> 
+               <h1 id="lastname">CORDOVA JR</h1>       
+         </div>
+         <div class="aboutme">
+               <h3 id="aboutmetitle">/ ALL ABOUT ME</h3> 
+               <p id="aboutmetext">
+                  I love solving problems and taking on new challenges.<br><br>
+                  As a former professional brewer, I have considerable experience automating tedious tasks and managing the operations and business of brewing.<br><br>
+                  During the COVID 19 pandemic, I've spent the last year learning to apply the skills I've mastered in brewing and extending them into software and technology. I am a Certified Kubernetes Administrator, as well as an AWS Certified Cloud Practitioner. I've completed courses on Linux Systems Administration, Docker, Git, Python, AWS, and Terraform, as well as completing Generation USA's Junior Cloud Practitioner Program.<br><br>
+                  I am passionate about automating tedious or repetitive tasks into streamlined processes. I'm looking for the right opportunity to continue to hone my technical skills, while bringing my brewing industry experience to bear on my new role.
+               </p>
+         </div>
+        </div>   
+      </div>  
 
-    <div class="leftcol">
-        <div class="fullname">
-            <h1 id="firstname">XAVIER</h1> 
-            <h1 id="lastname">CORDOVA JR</h1>       
-        </div>
-        <div class="aboutme">
-            <h3 id="aboutmetitle">/ ALL ABOUT ME</h3> 
-            <p id="aboutmetext">
-                I love solving problems and taking on new challenges.<br><br>
-                As a former professional brewer, I have considerable experience automating tedious tasks and managing the operations and business of brewing.<br><br>
-                During the COVID 19 pandemic, I've spent the last year learning to apply the skills I've mastered in brewing and extending them into software and technology. I am a Certified Kubernetes Administrator, as well as an AWS Certified Cloud Practitioner. I've completed courses on Linux Systems Administration, Docker, Git, Python, AWS, and Terraform, as well as completing Generation USA's Junior Cloud Practitioner Program.<br><br>
-                I am passionate about automating tedious or repetitive tasks into streamlined processes. I'm looking for the right opportunity to continue to hone my technical skills, while bringing my brewing industry experience to bear on my new role.
-            </p>
-        </div>
-    </div>  
-
-    <div class="rightcol"> 
+      <div class="rightcol"> 
         <div class="contact">
             <h3 id="contacttitle">/ CONTACT  DETAILS </h3>
             <p id ="contacttext">
@@ -110,24 +137,26 @@
         </p>
       </div>
       <div class="skills">
-        <h3 id="skillstitle">/ Skills</h3>
-        <p id ="Skillstext">
-            <ul>
-            <li>Linux</li>
-            <li>Bash</li>
-            <li>Microsoft Office Suite</li>
-            <li>Docker Git Creative</li>
-            <li>AWS</li>
-            <li>Kubernetes</li>
-            <li>Terraform</li>
-            <li>Ansible</li>
-            <li>Python</li>
-            <li>SSH</li>
-            <li>Hardworking</li>
-            <li>Curious</li>
-            <li>Adaptable</li>
-            </ul>
-        </p>
+        <!-- <h3 id="skillstitle">/ Skills</h3> -->
+        <div class="skillslist">
+         <!-- <p id ="Skillstext"> -->
+               <div class="skilltitle"><H3>/ Skills</H3></div>
+               <div>&nbsp;&nbsp;Linux</div>
+               <div>Bash</div>
+               <div>Microsoft Office Suite</div>
+               <div>&nbsp;&nbsp;Docker</div> 
+               <div>Creative</div>
+               <div>AWS</div>
+               <div>&nbsp;&nbsp;Kubernetes</div>
+               <div>Terraform</div>
+               <div>Ansible</div>
+               <div>&nbsp;&nbsp;Python</div>
+               <div>SSH</div>
+               <div>Hardworking</div>
+               <div>&nbsp;&nbsp;Curious</div>
+               <div>Adaptable</div>
+         <!-- </p> -->
+        </div>
       </div>
 
       <div class="education">
@@ -148,8 +177,6 @@
          <p id="doubleindent">Complete Git Guide: Understand and master Git and GitHub</p>
         </p>
       </div>
-
-
       <div class="experience">
         <h3 id="experiencetitle">/ WORK EXPERIENCE</h3>
         
@@ -168,7 +195,6 @@
           Created automated spreadsheets with use of visual basic to create water profiles for beer, project       future needs, and maintain inventory with in a tight budget.<br>
         </p>  
       </div>
-
       <div class="projects">
         <h3 id="projectstitle">/ PROJECTS & OTHER INTERESTS</h3>
         <p id="projectstext">
@@ -181,7 +207,7 @@
             </ul>
         </p>
       </div>
-      
+    </div>
     </div>
   </body>
 </html>
