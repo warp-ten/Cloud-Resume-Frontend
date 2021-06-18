@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello!</title>
+    <title>Xavier Cordova</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -18,26 +18,8 @@
       grid-template-columns: 2fr 1fr .5px 2fr 2fr; 
       grid-template-rows: auto;
     }
-    /* .galleryitem{
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      margin: 0%;
-      top: 0px;
-    }
-    .galleryitem .image{
-      width: 100%;
-      height: 100%;
-      position: relative;
-      margin: 0%;
-    }
-    .galleryitem .image img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 10px;
-      border-radius: 10px;
-    } */
+
+
     .leftcol {
       display: grid;
       grid-column: 2;
@@ -54,6 +36,8 @@
       top: 10px;
       box-shadow: 4px 5px 5px grey;
     }
+
+
     .rightcol {
       grid-column: 4;
       display: grid;
@@ -77,14 +61,16 @@
     #contacttitle {
     margin-bottom: -2mm;
     }
+
+
     .container{
        display:grid;
        grid-gap: 10px;
        grid-template-columns:50px 50px 50px 50px;
        grid-template-rows:50px;
        background-color: white;
-       margin-top: 6mm;
-       margin-bottom: 2mm;
+       margin-top: 3mm;
+       margin-bottom: -1mm;
     }
     .containeritem{
       width: 100%;
@@ -95,15 +81,27 @@
       width: 100%;
       height: 100%;
       position: relative;
+      /* background-color: hotpink; */
     }
     .containeritem .image img{
       width: 100%;
       height: 100%;
       object-fit: cover; 
+      transform:scale(.85);
+      
     }   
     .containeritem:hover .image img{
-       transform:scale(.85);
+       transform:scale(.75);
     }
+    /* .containeritem .text{
+      opacity: 1;
+      position: absolute;
+      /* top: 50%;
+      left: 50%; */
+      transform: translate(-1%,-1%);
+    } */
+
+
     [id*="title"] {
       margin-bottom: -3mm;
       text-decoration: underline;
@@ -127,22 +125,29 @@
      font-size: 90%;
      font-weight: bold;
     }
+
+
     .skillslist{
        display: grid;
        grid-template-columns: 1fr 1fr 1fr;
        grid-template-rows: auto;
+       margin-top: 6mm;
+       margin-bottom: 6mm;
     }
     .skillslist > div{  
       text-align: left;
-      margin-left: 3mm;
+      margin-left: 1mm;
+      
 
     }
     .skilltitle{
        grid-row: 1;
        grid-column: 1 / 4;
-       text-decoration: underline;
+       /* text-decoration: underline; */
        margin-bottom: -5mm;
        margin-top: -3mm;
+       transform: translate(-.9%, -4mm);
+       
     }
     </style>
   </head>  
@@ -190,7 +195,7 @@
                   <div class="image">  
                      <img class="blank"src="./white.png"alt="blank-icon"> 
                   </div> 
-                  <div class="text">Github</div> 
+                  <div class="text"> </div> 
                </div>
             </div>
             <div class="gallerycontainer">
@@ -228,30 +233,32 @@
         <!-- <h3 id="skillstitle">/ Skills</h3> -->
         <div class="skillslist">
          <!-- <p id ="Skillstext"> -->
-               <div class="skilltitle"><H3>/ Skills</H3></div>
+               <div class="skilltitle"><H3>/ SKILLS</H3></div>
                <div>&nbsp;&nbsp;Linux</div>
-               <div>Bash</div>
-               <div>Microsoft Office Suite</div>
-               <div>&nbsp;&nbsp;Docker</div> 
-               <div>Creative</div>
                <div>AWS</div>
-               <div>&nbsp;&nbsp;Kubernetes</div>
-               <div>Terraform</div>
-               <div>Ansible</div>
-               <div>&nbsp;&nbsp;Python</div>
                <div>SSH</div>
-               <div>Hardworking</div>
-               <div>&nbsp;&nbsp;Curious</div>
+               <div>&nbsp;&nbsp;Docker</div> 
+               <div>Python</div>
+               <div>Microsoft Office Suite</div>
+               
+               <div>&nbsp;&nbsp;Kubernetes</div>
+               <div>Ansible</div>
+               <div>Curious</div>
+               <div>&nbsp;&nbsp;Github Actions</div>
+               <div>Bash</div>
+               <div>Creative</div>
+               <div>&nbsp;&nbsp;Terraform</div>
+               <div>Git</div>
                <div>Adaptable</div>
          <!-- </p> -->
         </div>
       </div>
 
       <div class="education">
-        <h3 id="educationtitle">/ Education History</h3>
+        <h3 id="educationtitle">/ EDUCATION HISTORY</h3>
         <p id="educationtext">
          <p id="text"><b>Generation USA - Cloud Practitioner</b></p>
-         <p id="doubleindent">Fast paced program teaching learners to become proficient cloud practitioners. AWS, Linux Administration, Python, Terraform, Ansible</p>
+         <p id="doubleindent">Fast paced 40+ hr/week program, teaching learners to become proficient cloud practitioners. AWS, Linux Administration, Python, Terraform, Ansible</p>
 
          <p id="singleindent"><b>Linux Foundation.org</b></p>
             <p id="doubleindent subheading">Kubernetes Fundamentals (LFS258)</p>
