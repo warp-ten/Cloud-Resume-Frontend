@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: s3 copy
+      - name: s3 copy html files
         uses: docker://amazon/aws-cli:latest
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
@@ -26,4 +26,21 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
         with:
-          args: s3 sync /github/workspace/html s3://ex-resume 
+          args: s3 sync /github/workspace/html s3://ex-resume --delete
+      
+      - name: s3 copy images
+        uses: docker://amazon/aws-cli:latest
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
+        with:
+          args: s3 cp /github/workspace/images s3://ex-resume/images --recursive
+      - name: s3 sync
+        uses: docker://amazon/aws-cli:latest
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
+        with:
+          args: s3 sync /github/workspace/html s3://ex-resume/images --delete
