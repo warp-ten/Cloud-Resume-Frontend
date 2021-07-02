@@ -25,3 +25,5 @@ You can see the website porgress here. Xaviercordovajr.com
 - [x] 13. **Source Control** - Create separate private GitHub repository for backend & frontend code.  
 - [x] 14. **CI/CD (Back end)** - Set up GitHub Actions for backend code.  
 - [x] 15. **CI/CD (Front end)** - Setup GitHub Actions for frontend code. 
+
+<img src="diagram.png" align="center" alt="drawing" width="75%"/>
