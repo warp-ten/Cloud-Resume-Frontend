@@ -26,4 +26,6 @@ You can see the website progress here. Xaviercordovajr.com
 - [x] 14. **CI/CD (Back end)** - Set up GitHub Actions for backend code.  
 - [x] 15. **CI/CD (Front end)** - Setup GitHub Actions for frontend code. 
 
-<img src="diagram.png" align="center" alt="drawing" width="75%"/>
+<p align="center">
+    <img src="diagram.png" align="center" alt="drawing" width="75%"/>
+</p>
