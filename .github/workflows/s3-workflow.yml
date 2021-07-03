@@ -18,7 +18,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
         with:
-          args: s3 cp /github/workspace/ s3://ex-resume --recursive --exclude '\'.github/*\'' --exclude '\'.git/*\'' --exclude '\'.gitignore\''
+          args: s3 cp /github/workspace/ s3://ex-resume --recursive --exclude '/github/workspace/.github/*' --exclude '/github/workspace/.git/*' --exclude '/github/workspace/.gitignore'
       - name: s3 sync
         uses: docker://amazon/aws-cli:latest
         env:
@@ -26,4 +26,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
         with:
-          args: s3 sync /github/workspace s3://ex-resume --delete --exclude '\'.github/*\'' --exclude '\'.git/*\'' --exclude '\'.gitignore\''
+          args: s3 sync /github/workspace/ s3://ex-resume --delete --exclude '/github/workspace/.github/*' --exclude '/github/workspace/.git/*' --exclude '/github/workspace/.gitignore'

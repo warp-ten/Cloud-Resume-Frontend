@@ -1,6 +1,6 @@
 const xhr = new XMLHttpRequest(),
     method = "GET",
-    url = "https://f3n83h2nng.execute-api.us-east-1.amazonaws.com/prod/lambda-visit-count-function";
+    url = "https://izqkuht5o3.execute-api.us-east-1.amazonaws.com/prod/lambda-visit-count-function";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
