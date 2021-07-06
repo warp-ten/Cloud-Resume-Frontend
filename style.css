@@ -1,11 +1,16 @@
 body {
+    background-image: url("/Background.jpg");
     background-color: rgb(235, 235, 235);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
   }  
 
   .everything {
     display: grid;
-    background-color: rgb(235, 235, 235);
-    grid-template-columns: 2fr 1fr .5px 2fr 2fr; 
+    /* background-color: rgb(235, 235, 235); */
+    grid-template-columns: 2fr 1fr .5px 2.5fr 2fr; 
     grid-template-rows: auto;
   }
 
@@ -13,8 +18,9 @@ body {
   .leftcol {
     display: grid;
     grid-column: 2;
-    background-color: rgb(235, 235, 235);
+    /* background-color: rgb(235, 235, 235); */
     grid-gap: 10px;
+    margin: 2mm;
   }
   .leftcol > div {
     margin: auto;
@@ -24,7 +30,7 @@ body {
     position: sticky;
     bottom: 10px;
     top: 10px;
-    box-shadow: 4px 5px 5px grey;
+    box-shadow: 10px 10px 8px grey;
   }
   .counter > {
     display: grid;
@@ -37,14 +43,14 @@ body {
     bottom: 10px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 4px 5px 5px grey;
+    box-shadow: 10px 10px 8px grey;
   }
   .rightcol {
     grid-column: 4;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     padding: 10px;
-    background-color: rgb(235, 235, 235);
+    /* background-color: rgb(235, 235, 235); */
 
   }
   .rightcol > div {
@@ -52,7 +58,7 @@ body {
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 4px 5px 5px grey;
+    box-shadow: 10px 10px 8px grey;
   }  
   #lastname {
       color: black;
