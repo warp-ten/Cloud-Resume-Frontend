@@ -16,9 +16,9 @@ You can see the website progress here. Xaviercordovajr.com
 - [x] 4. **Static S3 Website**
 - [x] 5. **HTTPS** - S3 Website URL should use HTTPS  
 - [x] 6. **DNS** - Custom DNS domain name with CloudFront distribution.  
-- [ ] 7. **Javascript** - Include visitor counter  
+- [x] 7. **Javascript** - Include visitor counter  
 - [x] 8. **Database** - Store visitor count in a database.  
-- [ ] 9. **API** - Connect web app and database through an API and Lambda.  
+- [x] 9. **API** - Connect web app and database through an API and Lambda.  
 - [x] 10. **Python** - Use Python to create a lambda function. That will increment counter/DB count.  
 - [ ] 11. **Tests** - Include some tests for your Python code.  
 - [x] 12. **Infrastructure as Code** - I'm using Terraform  
