@@ -4,8 +4,7 @@
 
 
 This is the Fontend portion of my take on building a solution to Forrest Brazeal's [Cloud-Resume-Challenge](https://cloudresumechallenge.dev/instructions/).  
-Code Review for this Challenge is/was July 31, 2021.  
-*Until code review, backend repo will be private as per challenge request.  
+Backend repo is here. https://github.com/warp-ten/Cloud-Resume-Backend  
 You can see the website progress here. Xaviercordovajr.com
 
 ## Instructions 
